@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="store.css">
+
+<title>Store</title>
+</head>
+
+<body>
+
+<!-- Top Header -->
+<header class="topbar">
+
+<h2>Store</h2>
+
+<div class="notification">
+
+<i class="fa-regular fa-bell"></i>
+<span class="badge">5</span>
+
+</div>
+
+</header>
+
+
+
+<div class="container">
+
+<!-- Balance Card -->
+<div class="balance-card">
+
+<div class="balance-header">
+<span>Your Balance</span>
+<span class="premium">👑Premium</span>
+</div>
+
+<h1>250 🪙</h1>
+
+<p>Subscription expires: 2026-03-18</p>
+
+</div>
+
+
+
+<!-- Tabs -->
+<div class="tabs">
+
+<button class="tab active"
+onclick="showTab('coins',event)">
+Buy Coins
+</button>
+
+<button class="tab"
+onclick="showTab('sub',event)">
+Subscriptions
+</button>
+
+</div>
+
+
+
+<!-- Coin Packages -->
+<div id="coins" class="tab-content active">
+
+<h3>Coin Packages</h3>
+
+
+<div class="card">
+
+<div>
+<h2>50 🪙</h2>
+<p class="price">10,000 MMK</p>
+</div>
+
+<button class="buy-btn">
+Buy Now
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div>
+
+<h2>
+120 🪙
+<span class="bonus">+20 BONUS</span>
+</h2>
+
+<p class="price">20,000 MMK</p>
+
+<small>Get 140 coins total!</small>
+
+</div>
+
+<button class="buy-btn">
+Buy Now
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div>
+
+<h2>
+300 🪙
+<span class="bonus">+50 BONUS</span>
+</h2>
+
+<p class="price">40,000 MMK</p>
+
+</div>
+
+<button class="buy-btn">
+Buy Now
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- subscription placeholder -->
+
+<div id="sub" class="tab-content">
+
+<h3>Subscription Plans</h3>
+
+
+<!-- Basic -->
+<div class="plan-card basic">
+
+<h2>&#128582;Basic</h2>
+
+<p class="price" style="color: #a23bff;">16,000 MMK<span>/ month</span></p>
+
+<ul>
+
+<li>Access to select premium content</li>
+
+<li>Ad-free reading</li>
+
+<li>50 bonus coins monthly</li>
+
+</ul>
+<button class="plan-btn" style="background: #a23bff; color: white;">
+
+Subscribe
+
+</button>
+
+
+</div>
+
+
+
+<!-- Premium -->
+<div class="plan-card premium-plan">
+
+<h2>👑Premium</h2>
+
+<p class="price">30,000 MMK <span>/ month</span></p>
+
+<ul>
+
+<li>Unlimited access to all content</li>
+
+<li>Ad-free reading</li>
+
+<li>150 bonus coins monthly</li>
+
+<li>Early access to new releases</li>
+
+<li>Exclusive subscriber badges</li>
+
+</ul>
+
+<button class="plan-btn current">
+
+Current Plan
+
+</button>
+
+</div>
+
+
+
+<!-- Pro -->
+<div class="plan-card pro">
+
+<h2>&#128133;Pro</h2>
+
+<p class="price">50,000 MMK <span>/ month</span></p>
+
+<ul>
+
+<li>Everything in Premium</li>
+
+<li>300 bonus coins monthly</li>
+
+<li>Direct messaging with authors</li>
+
+<li>Vote on upcoming content</li>
+
+<li>Custom profile themes</li>
+
+</ul>
+
+<button class="plan-btn highlight">
+
+Subscribe
+
+</button>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- Bottom Navigation -->
+<nav class="bottom-nav">
+
+<a href="#">
+<i class="fa-solid fa-house"></i>
+<p>Home</p>
+</a>
+
+<a href="#">
+<i class="fa-solid fa-compass"></i>
+<p>Explore</p>
+</a>
+
+<a href="#">
+<i class="fa-solid fa-book"></i>
+<p>Library</p>
+</a>
+
+<a href="store.html" class="active">
+<i class="fa-solid fa-store"></i>
+<p>Store</p>
+</a>
+
+<a href="profile.html">
+<i class="fa-solid fa-user"></i>
+<p>Profile</p>
+</a>
+
+</nav>
+
+
+
+<script src="store.js"></script>
+
+</body>
+</html>
