@@ -1,14 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="profile.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="profile.css">
+
 </head>
 
 <body>
-    
-</body>
+
+
+<!-- Top Header -->
+<header class="top-bar">
+
+<h2 class="top-title">Profile</h2>
+
+<div class="notifications">
+
+<i class="fa-regular fa-bell"></i>
+<span class="bell">5</span>
+
+</div>
+
+</header>
+
+<div class="container">
+
+  <!-- PROFILE -->
+  <div class="card">
+    <div class="profile">
+      <img src="https://i.pravatar.cc/100" alt="">
+      <div>
+        <h2>Ye Marn 👑</h2>
+        <p class="subtext">alex@example.com</p>
+        <span class="badge">✍ Writer</span>
+      </div>
+    </div>
+
+    <p>Content enthusiast and aspiring writer</p>
+
+    <div class="stats">
+      <div class="stat-box">
+        <h3>250</h3>
+        <p>Coins</p>
+      </div>
+      <div class="stat-box">
+        <h3>👑 Premium</h3>
+        <p>Active</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SWITCH MODE -->
+  <div class="card switch-mode">
+    <div>
+      <h3>Switch Mode</h3>
+      <p>Currently in Reader mode</p>
+    </div>
+    <button class="btn">Writer Mode</button>
+  </div>
+
+  <!-- MENU -->
+  <div class="card">
+    <div class="menu-item" onclick="goTo('edit.html')">Edit Profile <span class="arrow">></span></div>
+    <div class="menu-item" onclick="goTo('history.html')">Reading History <span class="arrow">></span></div>
+    <div class="menu-item" onclick="goTo('purchase.html')">Purchase History <span class="arrow">></span></div>
+    <div class="menu-item" onclick="goTo('settings.html')">Settings <span class="arrow">></span></div>
+  </div>
+
+  <!-- DARK MODE -->
+  <div class="card switch-mode">
+    <div>
+      <h3>Light Mode</h3>
+    </div>
+    <div class="toggle" id="toggle">
+      <div class="toggle-circle"></div>
+    </div>
+  </div>
+
+  <!-- LOGOUT -->
+  <div class="logout" onclick="logout()">Logout</div>
+
+</div>
+
+<!-- Bottom Navigation -->
+<nav class="bottom-nav">
+
+<a href="#">
+<i class="fa-solid fa-house"></i>
+<p>Home</p>
+</a>
+
+<a href="#">
+<i class="fa-solid fa-compass"></i>
+<p>Explore</p>
+</a>
+
+<a href="Library.html" >
+<i class="fa-solid fa-book"></i>
+<p>Library</p>
+</a>
+
+<a href="store.html">
+<i class="fa-solid fa-store"></i>
+<p>Store</p>
+</a>
+
+<a href="profile.html" class="active">
+<i class="fa-solid fa-user"></i>
+<p>Profile</p>
+</a>
+
+</nav>
+
 <script src="profile.js"></script>
+
+</body>
 </html>
