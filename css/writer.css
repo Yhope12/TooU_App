@@ -83,11 +83,26 @@ padding-bottom:70px;
 .btn.primary {
   background: white;
   color: purple;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+}
+
+.btn.primary:hover{
+transform: translateY(-3px); /* Lifts the button up */
+  box-shadow: 0 10px 20px rgba(63, 67, 71, 0.4); /* Soft blue glow */
 }
 
 .btn.secondary {
   background: rgba(255,255,255,0.2);
   color: white;
+}
+
+.btn.secondary:hover{
+  /* Brightens the existing colors */
+  filter: brightness(1.1);
+  /* Adds a slight inner border effect */
+  outline: 2px solid rgba(255, 255, 255, 0.3);
+  outline-offset: -4px;
+
 }
 
 /* ===== STATS ===== */
