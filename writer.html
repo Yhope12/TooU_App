@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<title>Writer Dashboard</title>
+<link rel="stylesheet" href="css/writer.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <i class="fa-solid fa-arrow-left" onclick="goBack()"></i>
+  <h2>Writer Dashboard</h2>
+</div>
+
+<div class="container">
+
+  <!-- WELCOME -->
+  <div class="welcome">
+    <h2>Welcome back, Writer! ✍️</h2>
+    <p>Keep creating amazing content for your readers</p>
+
+    <div class="btn-group">
+      <button class="btn primary" onclick="goUpload()">📤Upload Content</button>
+      <button class="btn secondary" onclick="goAnalytics()">📊Analytics</button>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="grid">
+    <div class="card">
+      <i class="fa-regular fa-eye" style="color: #0072ff; background: rgb(168, 225, 248);" ></i>
+      <h2>125,000</h2>
+      <p>Total Views</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-regular fa-heart" style="color: red; background:rgb(249, 198, 198)"></i>
+      <h2>8,900</h2>
+      <p>Total Likes</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-regular fa-user" style="color:#7b2ff7; background: rgb(236, 190, 246);"></i>
+      <h2>1,250</h2>
+      <p>Subscribers</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-dollar-sign" style="color: #3ab77d; background: #78f5bb;"></i>
+      <h2>300,000 MMK</h2>
+      <p>Total Earnings</p>
+    </div>
+  </div>
+
+  <!-- EARNINGS -->
+  <div class="section">
+    <h3>Recent Earnings</h3>
+
+    <div class="earn-item">
+    
+      <span>2026-02-18</span>
+      <span>+$125.30</span>
+    </div>
+
+    <div class="earn-item">
+      <span>2026-02-17</span>
+      <span>+$98.50</span>
+    </div>
+
+    <div class="earn-item">
+      <span>2026-02-16</span>
+      <span>+$156.80</span>
+    </div>
+
+    <div class="earn-item">
+      <span>2026-02-15</span>
+      <span>+$210.84</span>
+    </div>
+
+    <div class="earn-item">
+      <span>2026-02-14</span>
+      <span>+$178.82</span>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="section">
+    <div class="section-header">
+      <h3>My Content</h3>
+      <a href="upload_files.html" class="new-series">+ New Series</a>
+    </div>
+    <br>
+    <div class="card content-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzmuKrJS1euvcSFoFAG6HZ2hmSR-NyAZJQlQ&s">
+      <div>
+        <h4>My Webtoon Series</h4>
+        <p>3 Episodes</p>
+        <p>👁<span>125 K</span>&nbsp;💗<span>8.9K</span></p>
+        <button class="manage-btn">✍️Manage</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SMALL CARDS -->
+  <div class="small-grid">
+    <div class="card message">
+      <p>💬</p>
+      <p>Messages</ps>
+      <p>15 unread</p>
+    </div>
+
+    <div class="card message">
+      <p>💭</p>
+      <p>Comments</p>
+      <p>48 new</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function goBack(){
+  window.location.href = "profile.html";
+}
+function goUpload(){
+    window.location.href="upload_files.html";
+}
+function goAnalytics(){
+  window.location.href = "analytics.html";
+}
+if (localStorage.getItem("darkMode") === "true") {
+  document.body.classList.add("dark");
+}
+</script>
+
+</body>
+</html>
