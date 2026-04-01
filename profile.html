@@ -7,8 +7,8 @@
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="profile.css">
-
+<link rel="stylesheet" href="css/profile.css">
+<link rel="stylesheet" href="css/theme.css">
 </head>
 
 <body>
@@ -61,21 +61,21 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       <h3>Switch Mode</h3>
       <p>Currently in Reader mode</p>
     </div>
-    <button class="btn">Writer Mode</button>
+    <button class="btn" onclick="goWriter()">Writer Mode</button>
   </div>
 
   <!-- MENU -->
   <div class="card">
-    <div class="menu-item" onclick="goTo('edit.html')">Edit Profile <span class="arrow">></span></div>
-    <div class="menu-item" onclick="goTo('history.html')">Reading History <span class="arrow">></span></div>
-    <div class="menu-item" onclick="goTo('purchase.html')">Purchase History <span class="arrow">></span></div>
-    <div class="menu-item" onclick="goTo('settings.html')">Settings <span class="arrow">></span></div>
+    <div class="menu-item" onclick="goTo('edit.html')">📝Edit Profile <span class="arrow">></span></div>
+    <div class="menu-item" onclick="goTo('history.html')">📖Reading History <span class="arrow">></span></div>
+    <div class="menu-item" onclick="goTo('purchase.html')">📜Purchase History <span class="arrow">></span></div>
+    <div class="menu-item" onclick="goTo('settings.html')">⚙️Settings <span class="arrow">></span></div>
   </div>
 
   <!-- DARK MODE -->
   <div class="card switch-mode">
     <div>
-      <h3>Light Mode</h3>
+      <h3 id="modeText">🔆Light Mode</h3>
     </div>
     <div class="toggle" id="toggle">
       <div class="toggle-circle"></div>
@@ -117,7 +117,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 </nav>
 
-<script src="profile.js"></script>
+<script src="js/profile.js"></script>
 
 </body>
 </html>
