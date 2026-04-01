@@ -54,12 +54,28 @@
 }
 
 .btn {
-  background: var(--primary);
+  background: linear-gradient(135deg, #00c6ff, #0072ff, #a100ff);
   color: white;
   border: none;
   padding: 10px 15px;
   border-radius: 10px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  /* Brightens the existing colors */
+  filter: brightness(1.1);
+  /* Adds a slight inner border effect */
+  outline: 2px solid rgba(255, 255, 255, 0.3);
+  outline-offset: -4px;
+}
+
+.bth:hover{
+background:#6d1fff;
+transform:scale(1.05);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* ===== MENU ===== */
