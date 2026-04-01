@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Analytics</title>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+:root {
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --sub: #666;
+  --primary: linear-gradient(90deg, #7b2ff7, #f107a3);
+  --border: #e5e5e5;
+}
+
+/* DARK MODE */
+body.dark {
+  --bg: #0b1220;
+  --card: #1c2536;
+  --text: #ffffff;
+  --sub: #ffffff;
+  --border: #2a3448;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: var(--card);
+}
+
+.topbar i {
+  cursor: pointer;
+}
+
+.topbar h2 {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  padding: 15px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: var(--card);
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+/* ===== CHART ===== */
+canvas {
+  width: 100% !important;
+  height: 250px !important;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* ===== TEXT ===== */
+.sub {
+  color: var(--sub);
+}
+
+/* ===== EPISODES ===== */
+.episode {
+  background: var(--bg);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row-percent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== PROGRESS ===== */
+.progress {
+  height: 6px;
+  background: #2a3448;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  border-radius: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(min-width:260px){
+  .container {
+    max-width: 420px;
+    margin: auto;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <i class="fa-solid fa-arrow-left" onclick="goBack()"></i>
+  <h2>Analytics</h2>
+</div>
+
+<div class="container">
+
+  <!-- ===== LINE CHART (THIS REPLACES YOUR OLD BAR CHART) ===== -->
+  <div class="card">
+    <div><span><h3 style="float: left;">Views Overview</h3></span>
+     <span><small style="color:#1db76f;float: right; padding: 10px;">+12.5%</small></span>
+    </div>
+    
+    <canvas id="viewsChart"></canvas>
+  </div>
+
+  <!-- STATS -->
+  <div class="grid">
+    <div class="card">
+      <p class="sub">Avg. Views/Day</p>
+      <h2>5,821</h2>
+      <small style="color:#1db76f;">+8.2%</small>
+    </div>
+
+    <div class="card">
+      <p class="sub">Engagement Rate</p>
+      <h2>7.2%</h2>
+      <small style="color:#1db76f;">+1.4%</small>
+    </div>
+
+    <div class="card">
+      <p class="sub">Subscriber Growth</p>
+      <h2>+143</h2>
+      <small style="color:#1db76f;">This week</small>
+    </div>
+
+    <div class="card">
+      <p class="sub">Like Rate</p>
+      <h2>12.4%</h2>
+      <small style="color:red">-0.5%</small>
+    </div>
+  </div>
+
+  <!-- TOP EPISODES -->
+  <div class="card">
+    <h3>Top Episodes</h3>
+
+    <div class="episode">
+      <div class="row">
+        <b>Episode 1</b>
+        <span style="color:violet">9.0%</span>
+      </div>
+      <p class="sub">👁️ 5,000 ❤️ 450</p>
+    </div>
+
+    <div class="episode">
+      <div class="row">
+        <b>Episode 2</b>
+        <span style="color:violet">7.5%</span>
+      </div>
+      <p class="sub">👁️ 4,200 ❤️ 380</p>
+    </div>
+
+    <div class="episode">
+      <div class="row">
+        <b>Episode 3</b>
+        <span style="color:violet">7.1%</span>
+      </div>
+      <p class="sub">👁️ 3,800 ❤️ 340</p>
+    </div>
+
+  </div>
+
+  <!-- AUDIENCE -->
+  <div class="card">
+    <h3>Audience Insights</h3>
+    <div class="row-percent">
+      <p>Age 18-24</p>
+      <small>45%</small>
+    </div>
+    
+    <div class="progress"><div class="progress-bar" style="width:42%"></div></div>
+
+    <div class="row-percent">
+      <p>Age 25-34</p>
+      <small>35%</small>
+    </div>
+    
+    <div class="progress"><div class="progress-bar" style="width:35%"></div></div>
+
+    <div class="row-percent">
+      <p>Age 35+</p>
+      <small>23%</small>
+    </div>
+    
+    
+    <div class="progress"><div class="progress-bar" style="width:23%"></div></div>
+  </div>
+
+</div>
+</body>
+
+<script src="js/analytics.js"></script>
+</html>

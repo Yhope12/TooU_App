@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Upload Content</title>
+<!-- Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+  --primary:#8a2be2;
+  --primary-light:#a855f7;
+  --bg:#f5f5f7;
+  --card:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+}
+/* DARK MODE */
+body.dark {
+  --bg: #0b1220;
+  --card: #1c2536;
+  --text: #ffffff;
+  --border: #2a3448;
+}
+
+*{box-sizing:border-box;
+  font-family:Arial, sans-serif;}
+
+body{
+  margin:0;
+  background:var(--bg);}
+
+.container{
+  max-width:420px;
+  margin:auto;
+  background:var(--bg);}
+
+/* Top bar */
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px;
+  background:var(--card);
+  border-bottom:1px solid var(--border);
+}
+
+.topbar h2{
+  margin:0;
+  font-size:18px;}
+
+.publish{
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  padding:8px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.publish:hover{background:var(--primary-light);}
+
+.section{padding:15px;}
+
+/* Content type */
+.grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:12px;
+}
+.card{
+  background:var(--card);border-radius:12px;padding:15px;text-align:center;
+  border:1px solid var(--border);cursor:pointer;transition:0.3s;
+}
+.card.active{
+  background:var(--primary);color:#fff;
+}
+.card:hover{transform:scale(1.03);}
+
+/* Upload box */
+.upload-box{
+  border:2px dashed var(--border);
+  padding:30px;text-align:center;border-radius:12px;
+  cursor:pointer;background:var(--card);transition:0.3s;
+}
+.upload-box:hover{border-color:var(--primary);}
+
+input, textarea{
+  width:100%;padding:12px;margin-top:10px;border-radius:10px;
+  border:1px solid var(--border);outline:none;
+}
+input:focus, textarea:focus{border-color:var(--primary);}
+
+textarea{resize:none;height:100px;}
+
+/* Tags */
+.tag-row{display:flex;gap:10px;margin-top:10px;}
+
+.tag-row button{
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  padding:0 15px;
+  border-radius:10px;cursor:pointer;
+}
+.tag-row button{
+  padding:0 15px;
+}
+
+.tag-row button:hover{background:var(--primary-light);}
+
+/* Episode */
+.episode{
+  background:var(--card);
+  padding:15px;
+  border-radius:12px;
+  margin-top:10px;
+}
+
+.counter{
+  width:100px;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid var(--border);
+}
+
+@media(max-width:420px){
+  .container{padding:0 10px;}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="topbar">
+  <i class="fa-solid fa-arrow-left" onclick="goBack()"></i>
+  <h2>Upload Content</h2>
+  <button class="publish" onclick="publish()">Publish</button>
+</div>
+
+<div class="section">
+  <h4>Content Type</h4>
+  <div class="grid">
+    <div class="card active"><h2>📱</h2>Webtoon</div>
+    <div class="card"><h2>📚</h2>Novel</div>
+    <div class="card"><h2>🎨</h2>Cartoon</div>
+    <div class="card"><h2>✍️</h2>Poetry</div>
+  </div>
+</div>
+
+<div class="section">
+  <h4>Cover Image</h4>
+  <div class="upload-box" onclick="coverInput.click()"><h1>🖼️</h1>Click to upload cover image<br><small>PNG, JPG up to 10MB</small></div>
+  <input type="file" id="coverInput" hidden />
+
+  <input id="title" placeholder="Enter your content title" />
+  <input id="genre" placeholder="e.g., Fantasy, Romance, Sci-Fi" />
+  <textarea id="synopsis" placeholder="Write a compelling description..."></textarea>
+
+  <h4>Tags</h4>
+  <div class="tag-row">
+    <input placeholder="Add a tag" />
+    <button>+</button>
+  </div>
+
+  <h4>Upload Images</h4>
+  <div class="upload-box" onclick="imagesInput.click()"><h1>📤</h1>Click to upload images<br><small>Multiple images supported</small></div>
+  <input type="file" id="imagesInput" multiple hidden />
+
+  <div class="episode">
+    <label><input type="checkbox" checked /> Free Episode</label>
+    <div style="margin-top:10px;">
+      <label>Coin Cost</label><br>
+      <input type="number" class="counter" value="2" min="0" />
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<script src="js/upload.js"></script>
+
+</body>
+</html>
