@@ -1,0 +1,212 @@
+
+/* ===== THEME ===== */
+:root {
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --subtext: #666;
+  --primary: linear-gradient(90deg, #7b2ff7, #f107a3);
+  --border: #e5e5e5;
+}
+
+/* DARK MODE */
+body.dark {
+  --bg: #0b1220;
+  --card: #1c2536;
+  --text: #ffffff;
+  --subtext: #a0a7b5;
+  --border: #2a3448;
+}
+
+body{
+font-family: Arial;
+background:var(--bg);
+color: var(--text);
+margin:0;
+padding-bottom:70px;
+}
+/* ===== TOP BAR ===== */
+.topbar {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: var(--card);
+  position: sticky;
+  top: 0;
+}
+
+.topbar i {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.topbar h2 {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  padding: 15px;
+}
+
+/* ===== WELCOME CARD ===== */
+.welcome {
+  background: linear-gradient(135deg,#00c6ff,#0072ff,#a100ff);
+  color:white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.welcome h2 {
+  margin: 0;
+}
+
+.welcome p {
+  color: #e0e0e0;
+}
+
+.btn-group {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: white;
+  color: purple;
+}
+
+.btn.secondary {
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+/* ===== STATS ===== */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.card {
+  background: var(--card);
+  padding: 12px;
+  border-radius: 15px;
+}
+
+.card i {
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.card p{
+    color: #666;
+}
+.card h2 {
+  margin: 5px 0;
+}
+
+/* ===== EARNINGS ===== */
+.section {
+  margin-top: 20px;
+}
+
+.earn-item {
+  background: var(--card);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.earn-item span:last-child {
+  color: #1db76f;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between; /* pushes left & right */
+  align-items: center;
+}
+
+.section-header h3 {
+  margin: 0;
+}
+
+.new-series {
+  text-decoration: none;
+  color: purple;
+  font-weight: 500;
+}
+
+/* ===== CONTENT ===== */
+.content-card {
+  display: flex;
+  gap: 10px;
+  align-items: stretch; /* key fix */
+}
+
+.content-card img {
+  width: 80px;
+  height: auto; /* let it stretch naturally */
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Make text container fill full height */
+.content-card > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes top text & button apart */
+}
+
+/* Reduce spacing between text */
+.content-card h4,
+.content-card p {
+  margin: 2px 0;
+}
+
+
+.message p{
+margin: 4px 0;
+}
+
+/* Optional: tighten even more */
+.content-card h4 {
+  margin-top: 0;
+}
+
+.manage-btn {
+  background: purple;
+  color: white;
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* ===== SMALL CARDS ===== */
+.small-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(min-width:260px){
+  .container {
+    max-width: 420px;
+    margin: auto;
+  }
+}
